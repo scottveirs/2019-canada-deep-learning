@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Orcasound at ONC/Meridan 2019 workshops</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+
+
+<style type="text/css">
+  .highlight-red {color: red}
+  .highlight-yellow {color: yellow}
+  mark {
+    background-color: black;
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+     <center>
+      <h2>Detection & classification of SRKW calls</h2>
+	<h3>through human & machine learning, in real-time</h3>
+      <img src="content/orca-ferry.png" height="550">
+      <h3>Val Veirs and Scott Veirs, Beam Reach, SPC</h3>
+      <h4>Data Workshop<br>
+Organized by ONC/Merdian | 21-22 Nov 2019 | Victoria, BC</h4>
+      <div>
+       Slides at: <a href="http://orcasound.net/data/talks/2019-canada-deep-learning">orcasound.net/talks/</a> | Gmail: vveirs, sveirs | <a href="https://orcasound.slack.com">Slack</a> | <a href="https://trello.com/hydrophonenetwork">Trello</a>
+     </center>
+   </section>
+
+   <section class="slide">
+     <h2>Orcasound 2.0: new locations, node hardware/software, and app in 2019</h2>
+     <table>
+       <tr align="center">
+	<col style="width:33%">
+	<col style="width:33%">
+	<col style="width:33%">
+        <td><img src="content/os-map-past-now-2020.png" height="400"></td>
+        <td><img src="content/node-box.png" height="400"></td>
+        <td><img src="content/osv2-listen.png" height="400"></td>
+      </tr>
+    </table>
+    <div>
+<h3>Vision: Open source software, open data access, real-time engagement of citizen scientists and cloud-computing</h3> 
+	<p>Real-time inspiration: ~5 decades of live-stream pioneering by <a href="http://www.orca-live.net/community/index.html">OrcaLive</a> (Paul Spong and Helena Symonds)</p>
+      	<p>Thanks to: <a href="https://www.kickstarter.com/projects/sveirs/orcasound-listen-for-whales">2017 Kickstarter</a> backers, <a href="http://www.orcasound.net/hacker-hall-of-fame/">"hall of fame" devs & designers</a>, and the 2018-2019 hackathons at UW, Microsoft, and <a href="https://www.democracylab.org/index/?section=AboutProject&id=81">DemocracyLab</a></p>
+      <center>
+          <p>Public launch of Orcasound app in Nov 2018: <a href="http://live.orcasound.net">live.orcasound.net</a></p>
+          <p>Beta-testing more interactive UI in fall 2019: <a href="http://beta.orcasound.net">beta.orcasound.net</a><br>
+        </center>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Resources for teaching humans (& machines?)</h2>
+      <table cellpadding="10" cellspacing="10">
+<col style="width:50%">
+<col style="width:50%">
+<tr>
+            <td>
+<h4>Outreach/education nodes</h4>
+              <ul>
+                <li>Seattle Aquarium <a href="http://orcasound.net/sakiosk/">listening kiosk</a></li>
+		<li>Port Townsend Marine Science Center <a href="http://listen.orcasound.net/PracticeHere.aspx">listening station</a> built with Killer Whale Tales and NOAA support</li>
+                <li>2018: Langley Whale Center <a href="http://orcasound.net/ed/booth/local.html">Ocean Listening Exhibit</a></li>
+		<li>2019: Lime Kiln Visitor Center audio/video kiosk</li> 
+                <li>2020: Integration of new live streaming tech and citizen science into extant educational nodes</li>
+              </ul>
+<h4>Growing signal library</h4>
+              <ul>
+                <li><a href="http://orcasound.net/data/product/biophony">Biophony</a></li>
+                <li><a href="http://orcasound.net/data/product/biophony/SRKW/call-catalog/">SRKW call catalog</a></li>
+                <li><a href="https://docs.google.com/spreadsheets/d/18C5iiHy6pU3kiE59C_yZZSmFSuHqgXYVQjaihChy6Mo/edit#gid=0">SRKW call registry?</a></li>
+              </ul>
+            </td> 
+            <td>
+        	<img src="content/os-map-past-now-2020.png" width="578" hspace="10">
+             </td>
+            </tr>
+          </table>
+        </section>
+
+
+    <section class="slide">
+      <h2>Orcasound machine learning efforts</h2>
+        <h3>Open training & testing data for SRKW models</h3>
+	<ul>
+	<li> Documentation at Orcasound's <a href="https://github.com/orcasound/orcadata/wiki">orcadata repository Github wiki</a></li>
+	<li> Storage in <a href="https://s3.console.aws.amazon.com/s3/buckets/acoustic-sandbox">Orcasound's acoustic sandbox on S3</a></li>
+	<li> Annotation tools: Audacity and Pod.Cast </li>
+	</ul>
+	<img src="content/onc-audacity-7July-labels.png">
+    </section>
+
+    <section class="slide">
+      <h2>"Dory" (Erika Pelaez)</h2>
+	<h3>Orcasound hackathaon participant, 2018-2019</h3>
+<table><tr>
+<td>
+	<p>Semi-supervised(-ish) learning approach: <br>
+	<ol>
+	<li>Watkin's library: (Watkins library: orca class & other MarMam class)</li>
+	<li>Librosa: pre-processing and feature selection</li>
+	<li>Simple random forest model (non-NN, 128-bin vector from MelSpectrgram, 10-fold cross validation)
+	<li>SciKit learn (precision, recall, F1)</li>
+	<li>May try PCEN (per channel energy normalization)...</li>
+	</ol>
+        <img align="right" src="content/ml-william-watkins-mm-library.png" height="150">
+</td>
+<td>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/K0vmU_Jf3f4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</td>
+</tr></table>
+    </section>
+
+    <section class="slide">
+      <h2>UW ocean acoustic hack days (Nov 2018)</h2>
+	<h3>Led by Valentina Staneva and Shima Abadi</h3>
+	<p>Challenge: find SRKW calls in Oregon shelf OOI/RSN hydrophone node (80 m depth) during period when NOAA satellite teg track narrows down when they may have been audible...</p>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1jAc74fEyRyznLXXP5Mpq3tk5daE" width="640" height="480"></iframe> 
+	<p>DEMO validation tool: <a href="https://whale-dr.firebaseapp.com/#/">WhaleDr</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Microsoft Pod.Cast annotation tool</h2>
+	<h3>Product of July 2019 4-day Microsoft hackathon</h3>
+	<p>Developed by Akash Mahajan, Prakruti Gogia, & Nithya Govindarajan</p>
+        <img src="content/onc-podcast-dense.png">
+	<p><a href="https://podcaststorage.z5.web.core.windows.net/">DEMO</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>Microsoft Pod.Cast ML model</h2>
+	<h3>VGG-ish, ResCNN, transfer learning (Akash, Prakruiti, Nithya)</h3>
+<table><tr>
+	<col style="width:33%">
+	<col style="width:66%">
+<td><ul>
+	<li>validation via Pod.Cast UI</li>
+	<li>Round 0: labeled data from Watkin's "killer whales"</li>
+	<li>Round 1: data from Watkin's "killer whale" unlabeled master tapes</li>
+	<li>Round 2: 90 minutes data from Orcasound Lab 5 July 2019</li>
+	<li>Performance based on 30 min 5 July 2019 test set</li>
+	<li>Round 3 (in progress): ~3.5 hrs from Orcasound Lab 27 Sep 2017</li>
+    </ul>
+</td><td>
+        <img src="content/ml-podcast-rounds2_1_0_improvement_auc.png">
+</td></tr></table>
+	<p>Tour: <a href="https://github.com/orcasound/orcadata/wiki/Pod.Cast-data-archive">Pod.Cast page of the Orcadata wiki...</a></p>
+    </section>
+
+    <section class="slide">
+      <h2>UW grad students</h2>
+	<h3>Jennifer, John, Wai Sing, Yuhao</h3>
+        <img src="content/ml-uw-github.png" height="500">
+	<p><a href="https://join.slack.com/t/orcasound/shared_invite/enQtODQ0NjU1MjI0MTAwLTlkMDgzZTcwMjA0Yjc4ZjhkY2E2OGQ1MjgxMDM1YmY2MzY1MjJmYzc0ZWZkZDJhNjAxZDk2YjliNjk0MTRmNmY">Invitation to the Orcasound Slack workspace</a></p>
+    </section>
+
+
+    <section class="slide">
+      <h2>Localization of orca calls</h2>
+	<h4>Leads to: call source level, lombard effect, & great curiosities about cetacean communication</h4>
+        <img src="content/hydro-stand.png" height="500">
+    </section>
+
+    <section class="slide">
+      <h2>Orca communication animation</h2>
+	<h3>Rare separation of a calf documents call-respons in SRKWs</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/U0Ue1zHK5ig?start=22" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+	<p>Red dot is mother/brother location; blue dot is calf. Towed array is in lower right corner.</p>
+    </section>
+
+
+    <section class="slide">
+      <h2>Orcasound DC (~2002): WhoListener</h2>
+      <img src="content/wholistener.png">
+        <p>Admiralty Inlet study (unpublished): of 22 SRKW transits, humans detect 45%, Wholistener 64%, combined 77%. (71/79/93% during local daytime)</P>
+        <p>During 2009-2012 *many* .jpg spectrograms and .mp3 clips were archived (<a href="http://orcasound.net/wholistener/os/detections/raw/">example raw data directory</a>) & there is a mySQL database with O(1000) expert validations</p>
+    </section>
+
+    <section class="slide">
+      <h2>Orcasound DC (2009): ASA Portland, OR</h2>
+      <img src="content/asa-title.png">
+    </section>
+
+    <section class="slide">
+      <h2>Orcasound DC: flow chart</h2>
+      <img src="content/asa-blue-blur.png">
+    </section>
+
+    <section class="slide">
+      <h2></h2>
+      <img src="content/asa-f-features.png">
+    </section>
+
+    <section class="slide">
+      <h2>Orcasound DC: triggering</h2>
+	<h3></h3>
+	<p></p>
+        <img src="content/asa-trigger.png">
+    </section>
+
+    <section class="slide">
+      <img src="content/asa-poly-features.png">
+    </section>
+
+    <section class="slide">
+      <h2></h2>
+      <img src="content/asa-phylo-tree.png">
+    </section>
+
+    <section class="slide">
+      <h2></h2>
+      <img src="content/asa-mem-comp.png">
+    </section>
+
+
+    <section class="slide">
+      <h2>Current DC effort: Zorbita</h2>
+      <img src="content/zorbita.png">
+	<h3>From Visual Basic to QT to the clouds?</h3>
+    </section>
+
+    <section class="slide">
+      <h2>Questions?</h2>
+      <img src="content/val-cable-kelp.jpg">
+    </section>
+
+    <section class="slide">
+      <h2></h2>
+      <img src="content/">
+    </section>
+
+    <section class="slide">
+      <h2></h2>
+	<h3></h3>
+	<p></p>
+        <img src="content/.png" height="500">
+        <img src="content/.png" height="300">
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+  <!-- Required JS files. -->
+  <script src="jquery.min.js"></script>
+  <script src="core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="extensions/menu/deck.menu.js"></script>
+  <script src="extensions/goto/deck.goto.js"></script>
+  <script src="extensions/status/deck.status.js"></script>
+  <script src="extensions/navigation/deck.navigation.js"></script>
+  <script src="extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+</body>
+</html>
